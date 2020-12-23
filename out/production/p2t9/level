@@ -1,0 +1,72 @@
+level1
+
+
+ships
+2
+
+ship1
+10 red
+10
+50
+weps
+2
+speck 5 5
+speck -5 5
+ai
+1
+down
+1
+5
+
+
+ship2
+7 green
+4
+100
+weps
+0
+ai
+2
+down
+20
+5
+rightup
+10
+2
+
+
+data
+
+ship1 3 100
+ship1 4 150 
+ship1 5 200 
+ship2 12 100
+ship2 12 200
+ship2 12 300
+ship2 12 400
+ship2 12 500
+ship2 12 600
+ship2 12 700
+
+
+end 
+//nothing after end is read
+
+some descriptions
+
+ship1
+10 red   //10 x 10 square of that color
+10  //hp
+50  //money
+weps //start weapon block
+2
+speck 5 5 //create speck weapon at center of enemy offset by 5, 5 
+speck -5 5 //create speck weapon at center of enemy offset by 5, 5
+ai  //ai controls
+1   //how many directions
+down //direction. options are left, right, down, up, leftdown, leftup, rightdown, rightup. 
+1   //how many frames before it changes the above direction
+5   //speed for this move. it should be changed using the .9*current direction + .1 * new direction like the player does. (this is a running average or smoothing)
+
+
+ship1 3 100  // ship, time elapsed in seconds when it spawns, xlocation. y = -10
